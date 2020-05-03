@@ -1,0 +1,40 @@
+{% load static %}
+<!doctype html>
+<html>
+<head>
+	<title>VMI</title>
+	<link rel="stylesheet" href="{% static 'css/vmi.css'%}">
+    
+</head>
+<body>
+	{% block content %}
+	<h1>{{ coolant }}</h1>
+	{% endblock %}
+	<div id="a1">Model: nano</div> 
+	<div id="a2">hondacity</div>
+	<div id="a3">volkswagen</div>
+	<div id="a4">hyundai</div>
+	<div id="a5">skoda</div>
+	<div id="a6">maruti</div>	
+	<form method="GET" autocomplete="off">
+		<table>
+			<tr>
+				<td id="username">
+					Car Model
+				</td>
+				<td id="user">
+					<input type="text" name="vmi_opt">
+				</td>	
+			</tr>
+			<tr>
+				<td>
+					<input type="submit" class="button" value="Submit">
+				</td>
+			</tr>
+		</table>
+	</form>
+{% if vmi %}
+	<h1 id="h1"> vmi  index is {{vmi}}</h1>
+{% endif %}
+</body>
+</html>

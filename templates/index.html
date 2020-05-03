@@ -1,0 +1,426 @@
+{% load static %}
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>VMI</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'images/favicon.ico' %}">
+    <link rel="apple-touch-icon" href="{% static 'apple-touch-icon.png'%}">
+    
+
+    <!-- All css files are included here. -->
+    <!-- Bootstrap fremwork main css -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <!-- Owl Carousel main css -->
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css'%}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+    <!-- This core.css file contents all plugings css file. -->
+    <link rel="stylesheet" href="{% static 'css/core.css' %}">
+    <!-- Theme shortcodes/elements style -->
+    <link rel="stylesheet" href="{% static 'css/shortcode/shortcodes.css' %}">
+    <!-- Theme main style -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- Responsive css -->
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+    <!-- User style -->
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+
+
+    <!-- Modernizr JS -->
+    <script src="{% static 'js/vendor/modernizr-2.8.3.min.js' %}"></script>
+    <style>
+    div.options{
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+                    padding: 0;
+                    box-sizing: border-box;
+                    padding-left: 10px;
+                    font-family: inherit;
+                    display: block;
+                    border: 1px solid #e9e9e9;
+                    margin: 0;
+                    background: #fff;
+                    height: 44px;
+                    cursor: pointer;
+                    color: #95a1aa;
+                    -webkit-transition: all .3s ease .001s;
+                    padding-right: 30px !important;
+                    -webkit-appearance: none;
+                    line-height: 1;
+                    font-size: 14px;
+                    width: 50%;
+    }
+    div.fill{
+        -webkit-tap-highlight-color: rgba(0,0,0,0);
+        font-family: 'RobotoRegular',arial;
+        color: #566068;
+        font-weight: 400;
+        line-height: 26px;
+        margin: 0;
+        box-sizing: border-box;
+        padding-top: 15px;
+        padding-right: 15px;
+        padding-bottom: 5px;
+        padding-left: 15px; 
+        background: #fff;
+        -webkit-box-shadow: 0 1px 7px rgba(0,0,0,.05) !important;
+    }
+    div.card {
+  width: 700px;
+  padding-top: 15px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+}
+p.fnt-18{
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+color: #566068;
+padding: 0;
+font-size: 1.0rem;
+font-family: 'RobotoMedium',arial;
+}
+
+    </style>
+   <script>
+
+    window.onload = function () {
+    
+           
+    
+    var chart = new CanvasJS.Chart("chartContainer", {
+    
+            animationEnabled: true,
+    
+           
+    
+            title:{
+    
+                    text:"Vehicle Maintenance Index of various cars",
+    
+    
+            },
+             dataPointWidth: 25,
+    
+            axisX:{
+    
+                    interval: 1
+    
+            },
+    
+            axisY2:{
+    
+                    interlacedColor: "rgba(1,77,101,.2)",
+    
+                    gridColor: "rgba(1,77,101,.1)",
+    
+    
+                    title: "Components"
+    
+            },
+    
+            data: [{
+    
+                    type: "column",
+    
+                    name: "companies",
+    
+                    axisYType: "secondary",
+    
+                    color: "#014D65",
+    
+    
+                    dataPoints: [
+    
+                           { y:7.7 , label: "skoda" },
+    
+                           { y:9.4, label: "marutiswift" },
+    
+                           { y:6.2 , label: "newhondacity" },
+    
+                           { y:5 , label: "nano" },
+    
+                           { y: 8.5, label: "hyundai" },
+    
+                           
+    
+                           { y:9.3 , label: "volkswagen" },
+    
+                           
+                           
+    
+                        
+    
+                          
+                          
+    
+                    ]
+    
+            }]
+    
+    });
+    
+    chart.render();
+    
+     
+    
+    }
+    
+    </script>
+    
+</head>
+
+<body>
+    <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->  
+
+    <!-- Body main wrapper start -->
+    <div class="wrapper fixed__footer">
+        <!-- Start Header Style -->
+        <header id="header" class="htc-header header--3 bg__white">
+            <!-- Start Mainmenu Area -->
+            <div id="sticky-header-with-topbar" class="mainmenu__area sticky__header">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-2 col-lg-2 col-sm-3 col-xs-3">
+                            <div class="logo">
+                                <a href="{% url 'index' %}">
+                                    <img src="{% static 'images/logo/capture.jpg' %}" alt="VMI">
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Start MAinmenu Ares -->
+                        <div class="col-md-8 col-lg-8 col-sm-6 col-xs-6">
+                            <nav class="mainmenu__nav hidden-xs hidden-sm">
+                                <ul class="main__menu">
+                                    <li class="drop"><a href="{% url 'index' %}">Home</a></li>
+                                    <li class="drop"><a href="{% url 'shop' %}">Cars</a>
+                                        </li>
+                                    <li><a href="{% url 'contact' %}">contact</a></li>
+                                </ul>
+                            </nav>
+                                   
+                        </div>
+                        <!-- End MAinmenu Ares -->
+                        <div class="col-md-2 col-sm-4 col-xs-3">  
+                            <ul class="menu-extra">
+                                <li><a href="{% url 'login_register' %}"><span class="ti-user"></span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mobile-menu-area"></div>
+                </div>
+            </div>
+            <!-- End Mainmenu Area -->
+        </header>
+        <!-- End Header Style -->
+        
+       
+        <!-- End Offset Wrapper -->
+        <!-- Start Feature Product -->
+        <section class="bg__white">
+            <div class="container" align="center">
+                    <!-- End Left Feature -->
+                    <div  style="width: 1000px;">
+                        <div class="row mb-10 ">
+                        
+                        <h1><center>New Car Maintenance Calculator</center></h1><br>
+                       
+                        </div>
+                        
+                        <div class="row">
+                        <div class="col-lg-12 mob-p-lr-0 ">
+                        <div class="zm-cmn-WhiteBG fnt-16 pl-15 pt-15 pr-15 pb-5 mb-30 zw-cmn-shadowBorder">
+                        <p >Maintenance Cost is one of the most important factors while making a purchase decision for a new car. New Car Maintenance Calculator helps you to find the approximate maintenance of your dream car under normal running conditions - thus avoiding unpleasant surprises when your car is sent to the service station for regular maintenance in your ownership tenure. Just fill in your car details – Model in the cars page.</p>
+                        </div>
+                        
+                        </div>
+                      
+            </div>
+        </section>
+     
+        <!-- End Our Product Area -->
+        <!-- Start Blog Area -->
+        <section class="htc__blog__area bg__white pb--130">
+            <div class="container">
+                <div class="row">
+                    <div class="blog__wrap clearfix mt--60 xmt-30">
+                        <!-- Start Single Blog -->
+                        <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
+                            <div class="blog foo">
+                                <div class="blog__inner">
+                                    <div class="blog__thumb">
+                                            <img src="{% static 'images/blog/blog-img/SkodaRapid.jpg' %}" alt="blog images">
+                                       
+                                    </div>
+                                    <div class="blog__hover__info">
+                                        <div class="blog__hover__action">
+                                            <div class="blog__btn">
+                                                <a class="read__more__btn" >VMI : 4</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Single Blog -->
+                        <!-- Start Single Blog -->
+                        <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12">
+                            <div class="blog foo">
+                                <div class="blog__inner">
+                                    <div class="blog__thumb">
+                                        
+                                            <img src="{% static 'images/blog/blog-img/city.jpg' %}" alt="blog images">
+                                       
+                                        
+                                    </div>
+                                    <div class="blog__hover__info">
+                                        <div class="blog__hover__action">
+
+                                            <div class="blog__btn">
+                                                <a class="read__more__btn">VMI : 3</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Single Blog -->
+                        <!-- Start Single Blog -->
+                        <div class="col-md-4 col-lg-4 hidden-sm col-xs-12">
+                            <div class="blog foo">
+                                <div class="blog__inner">
+                                    <div class="blog__thumb">
+                                        
+                                            <img src="{% static 'images/blog/blog-img/nano.jpg' %}" alt="blog images">
+                                       
+                                    </div>
+                                    <div class="blog__hover__info">
+                                        <div class="blog__hover__action">
+                                            <div class="blog__btn">
+                                                <a class="read__more__btn" >VMI : 7</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Single Blog -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Blog Area -->
+        
+    </div>
+    <!-- Body main wrapper end -->
+    <!-- QUICKVIEW PRODUCT -->
+    <div id="quickview-wrapper">
+        <!-- Modal -->
+        <div class="modal fade" id="productModal" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal__container" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="modal-product">
+                            <!-- Start product images -->
+                            <div class="product-images">
+                                <div class="main-image images">
+                                    <img alt="big images" src="{% static 'images/product/big-img/1.jpg' %}">
+                                </div>
+                            </div>
+                            <!-- end product images -->
+                            <div class="product-info">
+                                <h1>Simple Fabric Bags</h1>
+                                <div class="rating__and__review">
+                                    <ul class="rating">
+                                        <li><span class="ti-star"></span></li>
+                                        <li><span class="ti-star"></span></li>
+                                        <li><span class="ti-star"></span></li>
+                                        <li><span class="ti-star"></span></li>
+                                        <li><span class="ti-star"></span></li>
+                                    </ul>
+                                    <div class="review">
+                                        <a href="#">4 customer reviews</a>
+                                    </div>
+                                </div>
+                                <div class="price-box-3">
+                                    <div class="s-price-box">
+                                        <span class="new-price">$17.20</span>
+                                        <span class="old-price">$45.00</span>
+                                    </div>
+                                </div>
+                                <div class="quick-desc">
+                                    Designed for simplicity and made from high quality materials. Its sleek geometry and material combinations creates a modern look.
+                                </div>
+                                <div class="select__color">
+                                    <h2>Select color</h2>
+                                    <ul class="color__list">
+                                        <li class="red"><a title="Red" href="#">Red</a></li>
+                                        <li class="gold"><a title="Gold" href="#">Gold</a></li>
+                                        <li class="orange"><a title="Orange" href="#">Orange</a></li>
+                                        <li class="orange"><a title="Orange" href="#">Orange</a></li>
+                                    </ul>
+                                </div>
+                                <div class="select__size">
+                                    <h2>Select size</h2>
+                                    <ul class="color__list">
+                                        <li class="l__size"><a title="L" href="#">L</a></li>
+                                        <li class="m__size"><a title="M" href="#">M</a></li>
+                                        <li class="s__size"><a title="S" href="#">S</a></li>
+                                        <li class="xl__size"><a title="XL" href="#">XL</a></li>
+                                        <li class="xxl__size"><a title="XXL" href="#">XXL</a></li>
+                                    </ul>
+                                </div>
+                                <div class="social-sharing">
+                                    <div class="widget widget_socialsharing_widget">
+                                        <h3 class="widget-title-modal">Share this product</h3>  
+                                        <ul class="social-icons">
+                                            <li><a target="_blank" title="rss" href="#" class="rss social-icon"><i class="zmdi zmdi-rss"></i></a></li>
+                                            <li><a target="_blank" title="Linkedin" href="#" class="linkedin social-icon"><i class="zmdi zmdi-linkedin"></i></a></li>
+                                            <li><a target="_blank" title="Pinterest" href="#" class="pinterest social-icon"><i class="zmdi zmdi-pinterest"></i></a></li>
+                                            <li><a target="_blank" title="Tumblr" href="#" class="tumblr social-icon"><i class="zmdi zmdi-tumblr"></i></a></li>
+                                            <li><a target="_blank" title="Pinterest" href="#" class="pinterest social-icon"><i class="zmdi zmdi-pinterest"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="addtocart-btn">
+                                    <a href="#">Add to cart</a>
+                                </div>
+                            </div><!-- .product-info -->
+                        </div><!-- .modal-product -->
+                    </div><!-- .modal-body -->
+                </div><!-- .modal-content -->
+            </div><!-- .modal-dialog -->
+        </div>
+        <!-- END Modal -->
+    </div>
+    <!-- END QUICKVIEW PRODUCT -->
+    <!-- Placed js at the end of the document so the pages load faster -->
+
+    <!-- jquery latest version -->
+    <script src="{% static 'js/vendor/jquery-1.12.0.min.js' %}"></script>
+    <!-- Bootstrap framework js -->
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <!-- All js plugins included in this file. -->
+    <script src="{% static 'js/plugins.js' %}"></script>
+    <script src="{% static 'js/slick.min.js' %}"></script>
+    <script src="{% static 'js/owl.carousel.min.js'%}"></script>
+    <!-- Waypoints.min.js. -->
+    <script src="{% static 'js/waypoints.min.js'%}"></script>
+    <!-- Main js file that contents all jQuery plugins activation. -->
+    <script src="{% static 'js/main.js' %}"></script>
+    <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+
+
+</body>
+
+</html>
